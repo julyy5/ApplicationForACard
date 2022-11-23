@@ -1,0 +1,21 @@
+image: Ubuntu  # образ для сборки
+
+stack: jdk 11  # версия JDK
+
+branches:
+  only:
+    - main  # ветка git
+
+install:
+  - chmod +x gradlew
+
+build: off  # будем использовать свой скрипт сборки
+
+build_script:
+  - ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информации
+  - gradlew test -Dselenide.headless=true
+
+
+
+
+
