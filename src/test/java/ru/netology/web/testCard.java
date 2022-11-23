@@ -9,15 +9,16 @@ import org.openqa.selenium.WebDriver;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 public class testCard {
 
     private WebDriver driver;
-
     @BeforeAll
     static void setUpAll() {
         System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
@@ -45,6 +46,5 @@ public class testCard {
         String text = driver.findElement(By.className("paragraph")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
     }
-
 
 }
