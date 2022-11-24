@@ -16,9 +16,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class testCard {
+public abstract class testCard {
 
     private WebDriver driver;
+
     @BeforeAll
     static void setUpAll() {
         System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
