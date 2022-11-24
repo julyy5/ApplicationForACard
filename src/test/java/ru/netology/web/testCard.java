@@ -20,6 +20,8 @@ public abstract class testCard {
 
     private WebDriver driver;
 
+
+
     @BeforeAll
     static void setUpAll() {
         ChromeOptions options = new ChromeOptions();
@@ -31,7 +33,8 @@ public abstract class testCard {
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
     }
 
     @AfterEach
